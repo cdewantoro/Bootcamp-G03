@@ -1,3 +1,9 @@
 Bootcamp Lavarel & VUE
 
 git init : untuk inisialisasi folder
+git add : untuk nambahin folder
+git commit -m "comment" : commit dengan comment
+git config --global user.email "your email"
+git config --global user.name "your name"
+git remote add origin : connect ke github
+git push -u origin master : push ke github
