@@ -1,9 +1,32 @@
 Bootcamp Lavarel & VUE
 
+############### GIT tutorial ####################
+
 git init : untuk inisialisasi folder
 git add : untuk nambahin folder
 git commit -m "comment" : commit dengan comment
-git config --global user.email "your email"
-git config --global user.name "your name"
 git remote add origin : connect ke github
 git push -u origin master : push ke github
+
+git config --global user.email "your email"
+git config --global user.name "your name"
+
+############### web development ################
+Basic
+1. HTML         : (Hypertext Markup Language) Kerangka dari Website
+2. CSS          : (Cascading Style Sheet) Manipulasi Tampilan dan bentuk Website
+3. Javascript   : Bahasa Pemograman Client Side dan Server Side
+4. PHP          : Bahasa Pemograman Server Side
+
+
+############### HTML ################
+
+perintah dalam html disebut tag
+diawali < > diakhiri </ >
+
+<!DOCTYPE html> fungsi sebagai penghubung file dengan browser
+
+<head></head> untuk konfigurasi 
+<body></body> untuk develop website
+
+
