@@ -1,0 +1,24 @@
+tulis 10 tag yang termasuk display inline
+1. a
+2. input
+3. button
+4. img
+5. strong 
+6. video
+7. small
+8. select
+9. option
+10. em
+
+
+tulis 10 tag yang termasuk display block
+1. p
+2. h1
+3. table
+4. hr
+5. br
+6. form
+7. header
+8. footer
+9. section
+10. div

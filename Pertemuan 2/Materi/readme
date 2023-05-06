@@ -1,0 +1,24 @@
+CSS
+
+3 metode untuk menghubungkan CSS
+1. Inline
+2. Internal
+3. External
+
+ Anatomi CSS :
+
+ Selector {
+    property : value;
+    property : value;
+    property : value;
+ }
+
+ selector digunakan untuk memilih tag html yang akan di manipulasi
+ property digunakan untuk memanipulasi tag 
+
+ class di css pakai .
+ id di css pakai #
+
+ id itu hanya bisa dipakai satu kali saja
+
+ pseudoclass  pakai : style yang aktif apabila ada trigger
