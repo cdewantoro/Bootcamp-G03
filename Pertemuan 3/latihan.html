@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Browser detect bahasa latin-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- bisa di akses oleh IE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- agar bisa diberi media query -->
+    <title>Latihan Navbar</title>
+    <style>
+        /* 
+        ada nilainya loading browser (default html);
+        1. inline : 1000
+        2. id : 100
+        3. class : 10 
+        4. element : 1 
+        5. important: 10000 
+        
+        
+        */
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body {
+
+        }
+        nav {
+            /* width:100%; */
+            left:0px;
+            right:0px;
+            height:80px;
+            background-color: lightblue;
+            padding-top:30px;
+            padding-left:40px;
+            position:fixed;
+            z-index:999;
+
+        }
+        .nav-list {
+            display:inline-block;
+        }
+        h1 {
+            margin-right: 30px;
+        }
+        ul.nav-list {
+
+            position:relative;
+        }
+        li.nav-list {
+            margin-right:20px;
+            height:30px;
+        }
+        .dropdown {
+            position:relative;
+            cursor: pointer;
+        }
+        .dropdown:hover .drop {
+            display: block;
+        }
+        .drop {
+            position:absolute;
+            background-color: white;
+            list-style:none;
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 40%);
+            display:none;
+            margin-top:10px;
+        }
+        .drop li {
+            top:20px;
+            padding:10px;
+            width:150px;
+        }
+        .drop li:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="nav-list">Latihan Navbar</h1>
+        <ul class="nav-list">
+            <li class="nav-list">Home</li>
+            <li class="nav-list">About</li>
+            <li class="nav-list dropdown">
+                Contact
+                 <ul class="drop">
+                    <li>Naufal</li>
+                    <li>Cahyo</li>
+                    <li>Taufiq</li>
+                 </ul>
+            </li>
+        </ul>
+    </nav>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci vero ab doloremque pariatur fugit hic nostrum aut maxime quis officia quibusdam nesciunt non commodi, perspiciatis facilis et minus! Dolorum.</p>
+
+</body>
+</html>
