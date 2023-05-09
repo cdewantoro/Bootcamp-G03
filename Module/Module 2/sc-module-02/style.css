@@ -1,0 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: linear-gradient(180deg, #7ADAE8, #0BA1DD) no-repeat;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter',sans-serif;
+    color: white;
+}
+
+.container {
+    width:90%;
+    margin-left:70px;
+}
+
+.nav {
+    height: 80px;
+    margin: auto;
+    margin: 32px 0 10px 0;
+    display:inline-block;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 48px;
+    display:inline-block;
+    margin-right: 100px;
+}
+.nav ul {
+    display:inline-block;
+
+}
+.nav ul li {
+    display:inline-block;
+    font-size: 24px;
+    font-weight:bold;
+    padding: 0 10px;
+}
+
+.nav ul li:hover {
+    color:black;
+    cursor: pointer;
+}
+
+.spot {
+    margin: auto;
+    height: 500px;
+    position: relative;
+}
+
+.bgSpot {
+    position:fixed;
+    z-index:-1;
+    bottom:0;
+    right:0;
+}
+
+.wrap {
+    margin-top:70px;
+    width: 800px;
+}
+
+.wrap h1 {
+    font-size: 80px;
+    line-height:1em;
+    padding-bottom:10px;
+}
+
+.wrap p {
+    line-height:1.4em;
+    padding-bottom:10px;
+    font-weight:lighter;
+}
+
+.btn {
+    display:block;
+    padding-top:10px;
+}
+.wrap button {
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 10px 50px;
+    background-color: #0BA1DD;
+    font-family: 'Inter',sans-serif;
+    color:white;
+    font-size:24px;
+    margin-right:10px;
+}
+
+.wrap button:active {
+    background-color:white;
+    color:black;
+}
