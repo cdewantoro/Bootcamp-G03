@@ -8,8 +8,51 @@
         display
         1.inline
         2.block
+        3.inline-block
+        4. none
+
+        5. flex
+        6. grid 
         */
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    p {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        text-align: center;
+        line-height: 100px;
+        display: inline-block;
+    }
     
+    h1 {
+        /* display:none; */
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: auto;
+        /* border-radius: 50px; */
+        padding-top: 30px;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 14px rgba(0,0,0, 50%);
+    }
+
+    span {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        display: inline-block;
+        /* margin-right: 40px;
+        margin-top: 10px; */
+        /* margin: 30px 0; */
+        /* margin: auto; */
+    }
+
     </style>
 </head>
 <body>
@@ -21,5 +64,12 @@
     <a href="">link 1</a>
     <a href="">link 2</a>
     <a href="">link 3</a>
+
+    <!-- Tag kosong -->
+    <div>Genbox</div>
+
+    <span></span>
+    <span></span>
+    <span></span>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan CSS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        .container {
+            border: 1px solid blueviolet;
+            width: 80%;
+            margin: auto;
+            position: relative;
+        }
+
+        .k1, .k2, .k3 {
+            width: 80%;
+            height: 80px;
+        }
+
+        .k1 {
+            background-color: salmon;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .k2 {
+            background-color: lightblue;
+            position: absolute;
+            top:0px;
+            right:0px;
+        }
+
+        .k3 {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="k1"></div>
+        <div class="k2"></div>
+        <div class="k3"></div>
+    </div>
+</body>
+</html>
