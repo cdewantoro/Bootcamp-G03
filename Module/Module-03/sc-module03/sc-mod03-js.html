@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Sederhana</title>
+    <script>
+        let saldo = 1000;
+        function promptBank() {
+            let pilihan = prompt("Selamat Datang di \rBANK SEDERHANA \r\rSilahkan pilih menu dibawah ini\r\r1. Cek Saldo\r2. Setor Tunai\r3. Tarik Tunai\r4. Keluar");
+            
+            if (pilihan==1) {
+                alert("saldo anda adalah "+saldo);
+                return promptBank();
+            } else if (pilihan==2){
+                setorTunai();       
+            } else if (pilihan==3) {
+                tarikTunai();
+            } else if (pilihan==4) {
+                let myWindow =
+                    open(location,'_self');
+                    myWindow.close();
+                    return false;
+            } else {
+                alert("Anda memasukkan menu yang salah");
+                promptBank();
+            }
+            return false;
+        }
+
+        function setorTunai() {
+            let setorCek = false;
+            while (!setorCek) {
+                setorNominal = prompt("Silahkan masukkan nominal uang yang akan di setor");
+                setor = parseInt(setorNominal);
+                if (isNaN(setor) || setor < 0) {
+                    alert("mohon masukkan jumlah uang yang disetor dengan benar");
+                    setorTunai();
+                } else {
+                    saldo += parseInt(setorNominal);
+                    alert("Saldo anda bertambah menjadi "+saldo);
+                    promptBank();
+                }
+                return false;
+            } 
+            promptBank();
+        }
+
+        function tarikTunai() {
+            let tarikCek = false;
+            while (!tarikCek) {
+                tarikNominal = prompt("Silahkan masukkan nominal uang yang akan di tarik");
+                tarik = parseInt(tarikNominal);
+                if (isNaN(tarik) || tarik < 0) {
+                    alert("mohon masukkan jumlah uang yang ditarik dengan benar");
+                    tarikTunai();
+                }
+                else if (tarik > saldo) {
+                    alert("uang yang ditarik lebih besar dari saldo anda\rsaldo anda saat ini adalah "+saldo+"\rmohon masukkan jumlah uang yang ditarik dengan benar");
+                    tarikTunai();2
+                }
+                else {
+                    saldo -= parseInt(tarikNominal);
+                    alert("Saldo anda berkurang menjadi "+saldo);
+                    promptBank();
+                }
+                return false;
+            } 
+            promptBank();
+        }
+
+    </script>
+</head>
+<body onload="promptBank()">
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+1. Pelajari telebih dahulu alert, prompt, dan confirm!
+2. Buatlah Program Bank Sederhana dengan Prompt, alert, dan confirm. buat bank dengan fitur tarik tunai, setor tunai, dan cek saldo! 
+	- Program harus berulang sampai user memutuskan untuk berhenti
+	- jika nilai tarik tunai lebih besar dari jumlah saldo, buat pesan gagal
+	- jika setor tunai buat program tidak bisa dimasukan huruf dan nilai kurang dari nol
+3. jangka waktu tugas 2 hari dimulai dari saat link modul di bagikan!
+
+tarik tunai - !<saldo
+setor tunai - hanya number, !<=0
+cek saldo 
+
