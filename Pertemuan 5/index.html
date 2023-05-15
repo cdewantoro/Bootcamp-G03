@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan HTML</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      document.querySelector("#root").innerHTML = "<h1>Hallo Dunia</h1>";
+
+      let var1 = "Kutip Dua";
+      let var2 = "Kutip Satu";
+      let var3 = "Template literal pakai Backtip bisa akses ekspresi";
+
+      // String
+      console.log("Hallo Dunia " + var1 + " Untuk String");
+      console.log("Hallo Dunia " + var2);
+
+      // Template literal
+      // Akses Ekspresi
+      console.log(`Hallo Dunia ${var3} Untuk Backtip`);
+      console.log(`1 + 1 = ${1 + 1}. `);
+
+      let gender = "cewe"
+
+      console.log(`Hallo ${(gender === "cewe")?} "Cantik" Jangan Lupa sarapan`)
+
+      let jenisKelamin = "cowo"
+      console.log(`Hallo ${(jenisKelamin === "cewe")? "Cantik" : (jenisKelamin === "cowo")? "Ganteng" : "kamu"} Jangan Lupa Sarapan`);
+    </script>
+  </body>
+</html>

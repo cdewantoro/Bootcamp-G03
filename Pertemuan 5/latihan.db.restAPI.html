@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+    //let DataBase = [
+    //     {
+    //         nama: "Risa",
+    //         hobi: "Nonton"
+    //     },
+    //     {
+    //         nama: "Nurul",
+    //         hobi: "Masak"
+    //     },
+    //     {
+    //         nama: "Ali",
+    //         hobi: "Sepeda"
+    //     },
+    //     {
+    //         nama: "Ucup",
+    //         hobi: "Main"
+    //     },
+    //     {
+    //         nama: "Ucup",
+    //         hobi: "Main"
+    //     },
+    //     {
+    //         nama: "Ucup",
+    //         hobi: "Main"
+    //     },               
+    // ]
+    // REST API - terlalu banyak fungsi
+    // Jquery, XML - server jadi lambat
+
+    // // FETCH contoh first Name
+    // fetch("https://reqres.in/api/users?page=2")
+    // .then(res => res.json())
+    // .then(res => console.log(res.data[0].first_name))
+
+    //FETCH
+    fetch("https://reqres.in/api/users?page=2")
+    .then(cahyo => cahyo.json())
+    .then(dewantoro => console.log(dewantoro.data))
+
+    //FETCH
+    fetch("https://reqres.in/api/users?page=2")
+    .then(res => res.json())
+    .then(res => {
+        // console.log(res)
+        // console.log(res.data)
+        res.data.map(data => {
+        document.querySelector("#root").innerHTML += List(data.first_name, data.email, data.last_name)
+    })
+    })
+    
+    async function tes(){
+        return await fetch("https://reqres.in/api/users?page=2")
+    }
+
+    let coba = tes()
+    coba.then(res => console.log(res))
+    
+  
+    // Tag Template
+
+
+    function List(a,b,c) {
+        return ` 
+            <ul>
+                <li>Nama : ${a}</li>
+                <li>Nama Akhir: ${c}</li>
+                <li>Email: ${b}</li>
+            </ul>
+        `;
+    }
+
+    function Home() {
+        return `
+            <h1>Hello World!</h1>
+            <p>Ini website saya selamat datang</p>
+        `;
+    }
+
+    // setTimeout(()=>{
+    //     document.querySelector("#root").innerHTML += Home()
+    // }, 3000)
+    
+    document.querySelector("#root").innerHTML = Home()
+
+    // res.data.map(data => {
+    //     document.querySelector("#root").innerHTML += List(data.first_name, data.email)
+    // })
+
+
+</script>
+</body>
+</html>

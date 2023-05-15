@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+    // let DataBase
+
+    let DataBase = [
+        {
+            nama: "Risa",
+            hobi: "Nonton"
+        },
+        {
+            nama: "Nurul",
+            hobi: "Masak"
+        },
+        {
+            nama: "Ali",
+            hobi: "Sepeda"
+        },
+        {
+            nama: "Ucup",
+            hobi: "Main"
+        },
+        {
+            nama: "Ucup",
+            hobi: "Main"
+        },
+        {
+            nama: "Ucup",
+            hobi: "Main"
+        },               
+    ]
+    
+    console.log(DataBase);
+    
+    // Tag Template
+    function Home() {
+        return `
+            <h1>Hello World!</h1>
+            <p>Ini website saya selamat datang</p>
+        `;
+    }
+
+    function List(a,b) {
+        return ` 
+            <ul>
+                <li>Nama : ${a}</li>
+                <li>Hobi : ${b}</li>
+            </ul>
+        `;
+    }
+
+    document.querySelector("#root").innerHTML = Home()
+    
+    DataBase.map(data => {
+        document.querySelector("#root").innerHTML += List(data.nama, data.hobi)
+    })
+
+</script>
+</body>
+</html>
