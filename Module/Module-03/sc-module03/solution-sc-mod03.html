@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solusi Studycase module 3 bank Sederhana</title>
+</head>
+<body>
+    <script>
+        let Kondisi = true;
+        let saldo = 0;
+
+        while(Kondisi) {
+            alert("Selamat Datang di Mobile Banking!")
+            let menu = parseInt(prompt("Menu\n1.Cek Saldo\n2.Tarik Tunai\n3.Setor Tunai"))
+            
+            if(menu === 1) {
+                alert("Saldo Anda : "+ saldo)
+            } 
+            else if (menu === 2) {                
+                let tarik = parseInt(prompt("Masukkan Jumlah Penarikan :"))
+                if(tarik > saldo) {
+                    alert("Saldo Anda Tidak Cukup!")
+                } else {
+                    if (isNaN(tarik)) {
+                        alert("Inputan Anda Salah! Masukkan Angka")
+                    }
+                    else {
+                        saldo -= tarik
+                        alert("Berhasil\nSaldo anda sekarang"+ saldo)
+                    }
+                }
+            } 
+            else if(menu === 3) {
+                let setor = parseInt(prompt("Masukkan Jumlah Setoran :"))
+                if(setor<=0) {
+                    alert("Saldo Anda Tidak Cukup!")
+                } else {
+                    if (isNaN(setor)) {
+                        alert("Inputan Anda Salah! Masukkan Angka")
+                    } else {
+                        saldo += setor
+                        alert("Berhasil\nSaldo anda sekarang :"+ saldo)
+                    }
+                }
+            } 
+            else {
+                alert("Input yang anda masukkan salah")
+            }
+
+
+            Kondisi = confirm("Lanjut Gak?")
+        }
+
+
+        alert("Terima kasih telah menggunakan layanan kami")
+    </script>
+</body>
+</html>

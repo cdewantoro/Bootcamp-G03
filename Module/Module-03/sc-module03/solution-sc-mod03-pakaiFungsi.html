@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=script, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function expression
+      // imediately function invoked
+      let bankOnline = (function () {
+        let saldo = 0;
+        return function main() {
+          let menu = parseInt(
+            prompt("Menu:\n1.Cek Saldo\n2. Tarik Tunai\n3. Setor Tunai")
+          );
+
+          if (menu === 1) {
+            alert("Saldo Anda : " + saldo);
+          } else if (menu === 2) {
+            let tarik = parseInt(prompt("Masukkan Jumlah Penarikan :"));
+            if (tarik > saldo) {
+              alert("Saldo Anda Tidak Cukup!");
+            } else {
+              if (isNaN(tarik)) {
+                alert("Inputan Anda Salah! Masukkan Angka");
+              } else {
+                saldo -= tarik;
+                alert("Berhasil\nSaldo anda sekarang" + saldo);
+              }
+            }
+          } else if (menu === 3) {
+            let setor = parseInt(prompt("Masukkan Jumlah Setoran :"));
+            if (setor <= 0) {
+              alert("Saldo Anda Tidak Cukup!");
+            } else {
+              if (isNaN(setor)) {
+                alert("Inputan Anda Salah! Masukkan Angka");
+              } else {
+                saldo += setor;
+                alert("Berhasil\nSaldo anda sekarang :" + saldo);
+              }
+            }
+          } else {
+            alert("Input yang anda masukkan salah");
+          }
+
+          let Kondisi = confirm("Lanjut Gak?");
+          if (Kondisi) {
+            return main();
+          } else {
+            return "Terimakasih telah menggunakan layanan kami";
+          }
+        };
+      })();
+
+      alert(bankOnline());
+
+      // let mulai = bankOnline()
+      // alert(mulai())
+    </script>
+  </body>
+</html>
