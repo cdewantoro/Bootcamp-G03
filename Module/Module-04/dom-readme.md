@@ -20,9 +20,7 @@ Document Object Model
 ## Class List
 - add
 - remove
-- toogle
+- toogle --> yang ada di buang, yang gak ada ditambahin
 - contains
-
-
 
 ## Event
