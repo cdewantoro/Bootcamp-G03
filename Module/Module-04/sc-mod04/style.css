@@ -32,15 +32,36 @@ body {
     background: #EEEEEE;
     box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
+    padding: 2px 10px;
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    width:750px;
+    bottom:20px;
+}
+.fot {
+    justify-content: center;
+    align-items: center;
+    display:block;
+    margin-left:40%;
+    color: #393E46;
 }
 
 .sideBar {
     position: fixed;
     left: 0;
-    top: 50%;
+    top: 40%;
+    left: 10px;
 }
 
-.sidebar {}
+.sideBar ul {}
+
+.sideBar ul li {
+    padding-bottom: 20px;
+    list-style-type:none
+}
 
 .loginContainer {
     width: 750px;
@@ -76,4 +97,61 @@ body {
     width: 375px;
     height: 403px;
 
+}
+
+.right h1 {
+    margin-left: 80px;
+}
+/* .right input {
+    width: 276px;
+    height : 48px;
+    border-radius: 12px;
+    font-family: roboto;
+    font-size: 18px;
+    border: 0px;
+    padding: 5px 20px;
+    background: url(images/icoUserDark.svg) #E7E7E7 no-repeat;
+    color: #c4c4c4;
+} */
+
+.right p {
+    font-size: 13px;
+}
+
+.right h1 {
+    color: #00ADB5
+}
+
+.inputBg {
+    width: 276px;
+    height : 52px;
+    border-radius: 12px;
+    border: 0px;
+    padding: 5px 10px 5px 5px;
+    background-color: #e7e7e7;
+    display:flex;
+    margin-bottom: 10px;
+}
+.inputBg img {
+    border-right:2px solid #c4c4c4;
+    padding-right:5px;
+}
+.inputBg input {
+    font-family: roboto;
+    font-size: 18px;
+    border:0px;
+    background-color: #e7e7e7;
+    display:inline-block;
+    margin-left: 10px;
+    color: #c4c4c4;
+}
+
+.right button {
+    width: 186px;
+    height: 52px;
+    background: #AAD8D3;
+    border-radius: 12px;
+    font-size: 24px;
+    color: #ffffff;
+    border: 0px;
 }
