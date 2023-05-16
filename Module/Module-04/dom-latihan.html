@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM</title>
+    <style>
+        /* .tes {
+          background-color: aqua;
+        } */
+        /* .coba {
+          background-color: red;
+        } */
+    </style>
+  </head>
+  <body>
+    <h1>Hallo</h1>
+    <h1>Dunia</h1>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  
+    <p id="test">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <ul class="coba">
+      <li>satu</li>
+      <li>dua</li>
+      <li>tiga</li>
+    </ul>
+ 
+    <button>dark</button>
+    <script>
+
+      // ############# SELECTION
+      // console.log(document.getElementById("test"));
+      // console.log(document.getElementsByClassName("coba"));
+      // console.log(document.getElementsByTagName("li"));
+      // console.log(document.querySelector("li"))
+      // console.log(document.querySelector(".coba"))
+      // console.log(document.querySelector("#test"))
+      // console.log(document.querySelector("h1"))
+
+      // ############## DOM Manipulation
+
+      // let judul = document.querySelector("h1")
+
+      // judul.style.color = "red"
+      // judul.style.backgroundColor = "yellow"
+
+      // judul.innerHTML = '<a href="#">tes</a>'
+
+      // let list = document.querySelector("ul")
+
+      // list.setAttribute("id","tes")
+
+        let judul = document.querySelector("h1")
+        let paraf = document.querySelector("p")
+        let list = document.querySelector("ul")
+        let btn = document.querySelector("button")
+
+        // judul.classList.add("tes")
+        // paraf.classList.remove("test")
+        // toogle 
+        // judul.classList.toggle("coba")
+        // list.classList.toggle("coba")
+
+
+        // contains
+        // console.log(list.classList.contains("coba")) // apabila ketemu diberi nilai true
+
+        // event
+
+        btn.addEventListener("click", function(){
+          document.body.style.backgroundColor="#333"
+          document.body.style.color="#fff"
+        })
+
+
+    </script>
+  </body>
+</html>
