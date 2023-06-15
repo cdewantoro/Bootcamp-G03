@@ -1,62 +1,60 @@
 <template>
-<div class="container">
-  <div class="row ">
-    <div class="col-sm">
-    <h1 class="display-1">{{ Lokasi }}</h1>
-    <h2>{{ Cuaca}} , {{ Temperatur }}</h2>
-    <hr>
-    <h2 class="tagline">Keep Save</h2>
+<div class="container-sm">
+  <div class="row">
+    <div class="col-sm d-flex align-items-center">
+        <div class="d-flex flex-column">
+        <h1 class="display-2">{{ Lokasi }}</h1>
+        <div class="card d-inline-flex float border-0 text-white" style="background: rgba(238, 238, 238, 0.5)"><img src="https://i.im.ge/2023/06/15/i9gksf.IconCloudy.png" width="80" height="80" class="position-absolute" style="margin-top:-10px;"><h2 class="display-8" style="padding:0 50px 0 75px;">{{ Cuaca}} , {{ Temperatur }}</h2></div>
+        <div class="background-white mt-4 mb-2" style="height:3px !important;background-color: #ffffff;"></div>
+        <h2 class="tagline">Keep Save</h2>
+      </div>
     </div>
     <div class="col-sm">
-      <HelloWorld lok="" :db="database" />
+      <CuacaWidget :db="database" />
     </div>
   </div>
 </div>
-
-
-  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import CuacaWidget from './components/CuacaWidget.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    CuacaWidget,
   },
   data() {
     return {
       Lokasi: 'Jakarta',
       Cuaca: 'Berawan',
+      Status: 2,
       Temperatur : '31 C',
       database: [
         {
           Lokasi: 'Yogyakarta',
-          Cuaca: 'Berawan ',
-          Status: '1',
+          Cuaca: 'https://i.im.ge/2023/06/15/i9gJm0.IconCloudySun.png',
+          Status: 1,
           Temperatur: '32 C'
         },
         {
           Lokasi: 'Bekasi',
-          Cuaca: 'Hujan',
-          Status: '2',
+          Cuaca: 'https://i.im.ge/2023/06/15/i9gnZT.IconRain.png',
+          Status: 2,
           Temperatur: '28 C'
-        }
+        },
+        {
+          Lokasi: 'Jakarta',
+          Cuaca: 'https://i.im.ge/2023/06/15/i9gksf.IconCloudy.png',
+          Status: 3,
+          Temperatur: '28 C'
+        },      
       ]
     } 
   }
-  // methods: {
-  //   statusCuaca() {
-  //     this.database.forEach(cuaca => {
-  //       if (cuaca.Cuaca === this.Cuaca) {
-  //         cuaca.Status = this.Status
-  //       }
-  //     })
-  //   }
+  }
 
-  // }
-}
 </script>
 
 <style>
@@ -71,12 +69,17 @@ h1 {
   margin-top: 60px;
 }
 body {
-  background: linear-gradient(106.98deg, #27A5F9 0.49%, rgba(39, 165, 249, 0) 99.66%) no-repeat;
+  background: linear-gradient(106.98deg, #27A5F9 0.49%, rgba(39, 165, 249, 0) 99.66%);
   height: 100%;
   width: 100%;
 }
 .tagline {
   font-family: 'COCOGOOSE', sans-serif;
   font-style:normal;
+}
+hr {
+    border-color: #F05F44 !important;
+    height: 3px !important;
+    max-width: 65px !important;
 }
 </style>
