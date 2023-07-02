@@ -1,16 +1,18 @@
 <template>
-<div class="container-sm">
-  <div class="row">
-    <div class="col-sm d-flex align-items-center">
-        <div class="d-flex flex-column">
-        <h1 class="display-2">{{ Lokasi }}</h1>
-        <div class="card d-inline-flex float border-0 text-white" style="background: rgba(238, 238, 238, 0.5)"><img src="https://i.im.ge/2023/06/15/i9gksf.IconCloudy.png" width="80" height="80" class="position-absolute" style="margin-top:-10px;"><h2 class="display-8" style="padding:0 50px 0 75px;">{{ Cuaca}} , {{ Temperatur }}</h2></div>
-        <div class="background-white mt-4 mb-2" style="height:3px !important;background-color: #ffffff;"></div>
-        <h2 class="tagline">Keep Save</h2>
+<div class="container-fluid vh-100">
+  <div class="container justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-4 d-flex align-items-center text-left">
+          <div class="d-flex flex-column">
+          <h1 class="display-2">{{ Lokasi }}</h1>
+          <div class="card d-inline-flex float border-0 text-white" style="background: rgba(238, 238, 238, 0.5)"><img :src="'assets/' + db[0].Cuaca" width="80" height="80" class="position-absolute" style="margin-top:-10px;"><h2 class="display-8" style="padding:0 50px 0 75px;">{{ Cuaca}} , {{ Temperatur }}</h2></div>
+          <div class="background-white mt-4 mb-2" style="height:3px !important;background-color: #ffffff;"></div>
+          <h2 class="tagline">Keep Save</h2>
+        </div>
       </div>
-    </div>
-    <div class="col-sm">
-      <CuacaWidget :db="database" />
+      <div class="col-6">
+        <CuacaWidget :db="database" />
+      </div>
     </div>
   </div>
 </div>
@@ -34,19 +36,19 @@ export default {
       database: [
         {
           Lokasi: 'Yogyakarta',
-          Cuaca: 'https://i.im.ge/2023/06/15/i9gJm0.IconCloudySun.png',
+          Cuaca: '../assets/IconCloudySun.png',
           Status: 1,
           Temperatur: '32 C'
         },
         {
           Lokasi: 'Bekasi',
-          Cuaca: 'https://i.im.ge/2023/06/15/i9gnZT.IconRain.png',
+          Cuaca: '../assets/IconRain.png',
           Status: 2,
           Temperatur: '28 C'
         },
         {
           Lokasi: 'Jakarta',
-          Cuaca: 'https://i.im.ge/2023/06/15/i9gksf.IconCloudy.png',
+          Cuaca: '../assets/IconCloudy.png',
           Status: 3,
           Temperatur: '28 C'
         },      

@@ -2,7 +2,7 @@
   <NavbarUtama :nama="nama" angka=" 7" />
   <br><br>
   <h1>Hallo {{ nama }}</h1>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="../assets/logo.png">
   <HelloWorld pesan="Mari belajar " :db="database" />
   <br><br>
   <input type="text" v-model="nama">
